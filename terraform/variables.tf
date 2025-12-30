@@ -1,24 +1,21 @@
-variable "region" {
-  type = string
-  default = "eu-central-1"
-}
-
-variable "ami_id" {
-  type = string
-}
-
-variable "instance_type" {
-  type = string
-}
-
-variable "key_name" {
-  type = string
+variable "aws_region" {
+  description = "AWS region to deploy resources"
+  type        = string
+  default     = "eu-central-1"
 }
 
 variable "vpc_id" {
-  type = string
+  description = "ID of the VPC where the EC2 instance will be deployed"
+  type        = string
 }
 
 variable "public_subnet_id" {
-  type = string
+  description = "ID of the public subnet where the EC2 instance will be deployed"
+  type        = string
+}
+
+variable "instance_type" {
+  description = "EC2 instance type"
+  type        = string
+  default     = "t3.medium"
 }
